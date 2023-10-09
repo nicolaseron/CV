@@ -2,6 +2,9 @@
 @import "base";
 @import "classes";
 @import "utils";
+@import "animations";
+@import "media-queries";
+
 .grid-container {
   display: grid;
   grid:
@@ -10,6 +13,15 @@
     "footer footer" auto
     / 350px auto;
   min-height: 100vh;
+  @include xs {
+    grid:
+      "header" auto
+      "main" auto
+      "picture" auto
+      "aside"
+      "footer" auto
+      / auto;
+  }
 }
 header {
   grid-area: header;
@@ -21,20 +33,34 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include xs {
+    padding: 5rem 2rem;
+  }
   h1 {
     font-size: 6rem;
     line-height: 8rem;
     font-weight: 300;
     letter-spacing: 3rem;
+    @include xs {
+      font-size: 4rem;
+      letter-spacing: 1.5rem;
+    }
   }
   p {
     letter-spacing: 0.5rem;
+  }
+  span {
+    display: inline-block;
+    animation: bounce 2s;
   }
 }
 .picture {
   grid-area: picture;
   padding: 6rem;
   background: var(--border);
+  @include xs {
+    padding: 7rem;
+  }
   img {
     border-radius: 50%;
   }
@@ -75,6 +101,21 @@ aside {
         top: -3px;
         border-radius: 50px;
       }
+      .bar-skill-progress-js {
+        position: absolute;
+        height: 5px;
+        width: 50%;
+        background-color: var(--light);
+      }
+      .bar-skill-dot-js {
+        position: absolute;
+        height: 12px;
+        width: 12px;
+        background: var(--dark);
+        left: 50%;
+        top: -3px;
+        border-radius: 50px;
+      }
     }
     .stars-container {
       display: flex;
@@ -89,7 +130,21 @@ aside {
       display: flex;
       justify-content: start;
       align-items: center;
-      margin: 2rem 0;
+      padding: 1rem;
+      border-radius: 5px;
+      transition: all 0.2s;
+      cursor: pointer;
+      a {
+        display: flex;
+      }
+      &:hover {
+        background: var(--border);
+        i {
+          color: var(--primary);
+          transform: scale(1.2);
+          transition: all 0.3s;
+        }
+      }
       i {
         flex: 0 0 50px;
         margin-right: 1rem;
@@ -105,6 +160,9 @@ aside {
 main {
   grid-area: main;
   padding: 5rem;
+  @include xs {
+    padding: 2rem;
+  }
   h2 {
     margin: 4rem;
   }
@@ -120,6 +178,9 @@ main {
       color: var(--hint);
       padding-right: 2rem;
       border-right: 1px solid var(--border);
+      @include xs {
+        padding-right: 2rem;
+      }
       p {
         margin: 0;
       }
@@ -150,6 +211,9 @@ footer {
   color: white;
   padding: 5rem;
   background: var(--text);
+  @include xs {
+    padding: 5rem 1.5rem;
+  }
   h2 {
     margin-bottom: 3rem;
   }
@@ -165,6 +229,7 @@ footer {
     font-size: 2rem;
     border-top-left-radius: 20%;
     border-bottom-left-radius: 20%;
+    height: 35.56px;
   }
   button {
     background: var(--text);
@@ -182,6 +247,7 @@ footer {
       font-size: 2rem;
       border-top-right-radius: 0.5rem;
       border-bottom-right-radius: 0.5rem;
+      height: 35.56px;
     }
   }
   .postfix {
@@ -198,6 +264,9 @@ footer {
     padding: 1rem 2rem;
     border: 0;
     outline: 0;
+    @include xs {
+      min-width: 200px;
+    }
     &::placeholder {
       color: var(--text);
     }
