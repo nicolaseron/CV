@@ -2,6 +2,7 @@
   &-small {
     letter-spacing: 0.5rem;
     font-size: 1.7rem;
+    margin-top: 30px;
   }
 }
 .text {
@@ -11,4 +12,14 @@
   &-hint {
     color: var(--hint);
   }
+}
+.image {
+  position: relative;
+  top: 5px;
+  width: 30px;
+}
+.image_fleche {
+  position: relative;
+  top: 5px;
+  width: 20px;
 }

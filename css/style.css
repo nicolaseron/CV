@@ -43,6 +43,7 @@ img {
 .title-small {
   letter-spacing: 0.5rem;
   font-size: 1.7rem;
+  margin-top: 30px;
 }
 
 .text-primary {
@@ -50,6 +51,18 @@ img {
 }
 .text-hint {
   color: var(--hint);
+}
+
+.image {
+  position: relative;
+  top: 5px;
+  width: 30px;
+}
+
+.image_fleche {
+  position: relative;
+  top: 5px;
+  width: 20px;
 }
 
 .mb-5 {
@@ -162,6 +175,10 @@ aside .block h3 {
 aside .block p {
   margin: 0 0 2rem 0;
   font-style: italic;
+}
+aside .block .link {
+  text-decoration: underline;
+  font-weight: 800;
 }
 aside .block .bar-skill {
   margin: 2rem;
@@ -285,6 +302,21 @@ main .experience .content ul {
   margin: 2rem 0;
   list-style: circle;
   padding-left: 4rem;
+}
+main .project h4 {
+  font-size: 1.7rem;
+  margin: 30px 4rem;
+}
+main .project li {
+  margin-bottom: 4rem;
+}
+main .project a {
+  font-weight: 800;
+  text-decoration: underline;
+  margin-left: 6rem;
+}
+main .project a img {
+  margin-right: 10px;
 }
 
 footer {

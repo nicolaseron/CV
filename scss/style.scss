@@ -81,6 +81,10 @@ aside {
       margin: 0 0 2rem 0;
       font-style: italic;
     }
+    .link {
+      text-decoration: underline;
+      font-weight: 800;
+    }
     .bar-skill {
       margin: 2rem;
       height: 5px;
@@ -197,6 +201,23 @@ main {
         margin: 2rem 0;
         list-style: circle;
         padding-left: 4rem;
+      }
+    }
+  }
+  .project {
+    h4 {
+      font-size: 1.7rem;
+      margin: 30px 4rem;
+    }
+    li {
+      margin-bottom: 4rem;
+    }
+    a {
+      font-weight: 800;
+      text-decoration: underline;
+      margin-left: 6rem;
+      img {
+        margin-right: 10px;
       }
     }
   }
