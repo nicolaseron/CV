@@ -189,10 +189,25 @@ aside .block .bar-skill {
 aside .block .bar-skill .bar-skill-progress {
   position: absolute;
   height: 5px;
-  width: 80%;
+  width: 90%;
   background-color: var(--light);
 }
 aside .block .bar-skill .bar-skill-dot {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  background: var(--dark);
+  left: 90%;
+  top: -3px;
+  border-radius: 50px;
+}
+aside .block .bar-skill .bar-skill-progress-js {
+  position: absolute;
+  height: 5px;
+  width: 80%;
+  background-color: var(--light);
+}
+aside .block .bar-skill .bar-skill-dot-js {
   position: absolute;
   height: 12px;
   width: 12px;
@@ -201,18 +216,33 @@ aside .block .bar-skill .bar-skill-dot {
   top: -3px;
   border-radius: 50px;
 }
-aside .block .bar-skill .bar-skill-progress-js {
+aside .block .bar-skill .bar-skill-progress-vue {
   position: absolute;
   height: 5px;
-  width: 50%;
+  width: 70%;
   background-color: var(--light);
 }
-aside .block .bar-skill .bar-skill-dot-js {
+aside .block .bar-skill .bar-skill-dot-vue {
   position: absolute;
   height: 12px;
   width: 12px;
   background: var(--dark);
-  left: 50%;
+  left: 70%;
+  top: -3px;
+  border-radius: 50px;
+}
+aside .block .bar-skill .bar-skill-progress-nuxt {
+  position: absolute;
+  height: 5px;
+  width: 65%;
+  background-color: var(--light);
+}
+aside .block .bar-skill .bar-skill-dot-nuxt {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  background: var(--dark);
+  left: 65%;
   top: -3px;
   border-radius: 50px;
 }
